@@ -174,7 +174,6 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>modules/</classpathPrefix>
-
                             <mainClass>de.revilo.App</mainClass>
                         </manifest>
                     </archive>
@@ -345,7 +344,6 @@
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>exec-maven-plugin</artifactId>
-
                     <configuration>
                       <!--   <executable>java</executable>      -->                   
                       <mainClass>de.revilo.App</mainClass>
