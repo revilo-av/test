@@ -245,6 +245,7 @@
                             <outputDirectory>${project.build.directory}/modules</outputDirectory>
                             <includeScope>compile</includeScope>
                         </configuration>
+                        
                     </execution>
                 </executions>
             </plugin>
