@@ -345,7 +345,7 @@
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>exec-maven-plugin</artifactId>
                     <configuration>
-                      <!--   <executable>java</executable>      -->                   
+                     <executable>java</executable>                       
                       <mainClass>de.revilo.App</mainClass>
                     </configuration>
                   </plugin>
