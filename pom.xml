@@ -246,6 +246,7 @@
                             <includeScope>compile</includeScope>
                         </configuration>
                         
+                        
                     </execution>
                 </executions>
             </plugin>
