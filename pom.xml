@@ -25,7 +25,6 @@
         <logback-classic.version>1.2.10</logback-classic.version>
         <logback-jackson.version>0.1.5</logback-jackson.version>
         <logback-json-classic.version>0.1.5</logback-json-classic.version>
-
         <jackson-databind.version>2.13.1</jackson-databind.version>
     </properties>
 
