@@ -372,9 +372,30 @@
                     <artifactId>maven-shade-plugin</artifactId>
                     <version>3.2.4</version>
                 </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-release-plugin</artifactId>
+                    <version>3.0.0-M5</version>
+                  </plugin>
             </plugins>
 
         </pluginManagement>
     </build>
+
+    <scm>
+        <connection>scm:git:git://github.com/github.com/revilo-av/test.git</connection>
+        <developerConnection>scm:git:https://github.com/github.com/revilo-av/test.git</developerConnection>
+        <url>https://github.com/revilo-av/test</url>
+        <tag>github-example-package</tag>
+    </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub ManjunathPrabhakar Apache Maven Packages</name>
+            <url>https://github.com/revilo-av/test</url>
+        </repository>
+    </distributionManagement>
 
 </project>
