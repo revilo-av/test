@@ -97,7 +97,7 @@
         </dependency>
 
         <!-- cli -->
-        
+
         <dependency>
             <groupId>info.picocli</groupId>
             <artifactId>picocli</artifactId>
@@ -184,7 +184,23 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
-                <version>3.2.4</version>
+                <configuration>
+                    <filters>
+                        <filter>
+                            <artifact>*:*</artifact>
+                            <excludes>
+                                <exclude>module-info.class</exclude>
+                                <exclude>META-INF/*.SF</exclude>
+                                <exclude>META-INF/*.DSA</exclude>
+                                <exclude>META-INF/*.RSA</exclude>
+                                <exclude>META-INF/*.MF</exclude>
+                                <exclude>META-INF/*.LICENSE</exclude>
+                                <exclude>META-INF/NOTICE</exclude>
+                                <exclude>*module-info</exclude>
+                            </excludes>
+                        </filter>
+                    </filters>
+                </configuration>
                 <executions>
                     <execution>
                         <goals>
@@ -233,10 +249,13 @@
                 </executions>
             </plugin>
 
-              <plugin>
+            <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
-                <version>3.0.0</version>
+                <configuration>
+                    <executable>java</executable>
+                    <mainClass>de.revilo.App</mainClass>
+                </configuration>
             </plugin>
             <!--
                         <plugin>
@@ -341,15 +360,18 @@
                     <version>3.2.0</version>
                 </plugin>
 
+
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>exec-maven-plugin</artifactId>
-                    <configuration>
-                     <executable>java</executable>                       
-                      <mainClass>de.revilo.App</mainClass>
-                    </configuration>
-                  </plugin>
+                    <version>3.0.0</version>
+                </plugin>
 
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-shade-plugin</artifactId>
+                    <version>3.2.4</version>
+                </plugin>
             </plugins>
 
         </pluginManagement>
