@@ -1,0 +1,16 @@
+#!/bin/java --source 16
+
+public class HelloJava {
+
+    public static void main(String[] args) {
+
+
+        String values ="keine parameterer übergeben!!!";
+
+        if (args.length != 0){
+            values = args[0];
+        }
+
+        System.out.println("Hello " + values);
+    }
+}
