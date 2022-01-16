@@ -10,7 +10,16 @@ public class App implements Runnable {
 
 	public static void main(String[] args) throws Throwable {
 		logger.info("Hello World!");
+		
+		/*
+		try {
+			int  ie = 5/0;
+		} catch (Throwable e) {
+			e.printStackTrace();
+			throw e;
+		}*/
 
+		
 		for (int i = 0; i < 10; i++) {
 
 			Thread t = new Thread(new App(), "program " + i);
