@@ -6,7 +6,7 @@
 
     <groupId>de.revilo</groupId>
     <artifactId>example</artifactId>
-    <version>1.0</version>
+    <version>1.0.1</version>
     <packaging>jar</packaging>
 
     <name>example</name>
@@ -256,6 +256,17 @@
                     <mainClass>de.revilo.App</mainClass>
                 </configuration>
             </plugin>
+
+
+            <plugin>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>jib-maven-plugin</artifactId>
+                <configuration>
+                  <to>
+                    <image>de.revilo.example</image>
+                  </to>
+                </configuration>
+              </plugin>
             <!--
                         <plugin>
                             <artifactId>maven-jlink-plugin</artifactId>
@@ -376,6 +387,12 @@
                     <artifactId>maven-release-plugin</artifactId>
                     <version>3.0.0-M5</version>
                 </plugin>
+
+                <plugin>
+                    <groupId>com.google.cloud.tools</groupId>
+                    <artifactId>jib-maven-plugin</artifactId>
+                    <version>3.1.4</version>
+                </plugin>
             </plugins>
 
         </pluginManagement>
@@ -390,8 +407,8 @@
     <distributionManagement>
         <repository>
             <id>github</id>
-            <name>revilo-av</name>
-            <url>https://github.com/revilo-av/test</url>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/revilo-av/test</url>
         </repository>
     </distributionManagement>
 
@@ -415,7 +432,7 @@
                     <id>github</id>
                     <name>GH dreitier</name>
                     <!-- <name>GitHub OWNER Apache Maven Packages</name>-->
-                    <url>https://maven.pkg.github.com/revilo-av</url>
+                    <url>https://maven.pkg.github.com/revilo-av/test</url>
                     <snapshots><enabled>true</enabled></snapshots>
                     <releases><enabled>true</enabled></releases>
                 </repository>
