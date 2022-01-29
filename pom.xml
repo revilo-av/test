@@ -102,13 +102,13 @@
             <artifactId>picocli</artifactId>
             <version>4.6.2</version>
         </dependency>
-
+<!--
         <dependency>
             <groupId>io.admin-shell.aas</groupId>
             <artifactId>model</artifactId>
             <version>1.2.0</version>
         </dependency>
-
+-->
     </dependencies>
 
     <dependencyManagement>
